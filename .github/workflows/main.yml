@@ -30,15 +30,18 @@ jobs:
     - name: Test
       run: dotnet test BSInc.Templates.sln --no-restore --verbosity normal
 
+    - name: Generate version number
+      id: version
+      run: echo "VERSION=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
     - name: Pack
       if: github.event_name == 'push'
-      run: dotnet pack BSInc.Templates.sln --configuration Release --no-restore --output ./artifacts
+      run: dotnet pack BSInc.Templates.sln --configuration Release --no-restore --output ./artifacts /p:PackageVersion=${{ env.VERSION }}
 
     - name: Add GitHub Packages source
       if: github.event_name == 'push'
       run: dotnet nuget add source --name github "https://nuget.pkg.github.com/two4suited/index.json" --store-password-in-clear-text --username two4suited --password ${{ secrets.PUBLISH_TOKEN }}
- 
 
     - name: Publish to GitHub Packages
       if: github.event_name == 'push'
-      run: dotnet nuget push ./artifacts/*.nupkg --source "github"      
+      run: dotnet nuget push ./artifacts/*.nupkg --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
