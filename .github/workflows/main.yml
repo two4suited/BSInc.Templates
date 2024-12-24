@@ -36,7 +36,7 @@ jobs:
 
     - name: Add GitHub Packages source
       if: github.event_name == 'push'
-      run: dotnet nuget add source --name github "https://nuget.pkg.github.com/two4suited/index.json" --username two4suited --password ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget add source --name github "https://nuget.pkg.github.com/two4suited/index.json" --store-password-in-clear-text --username two4suited --password ${{ secrets.GITHUB_TOKEN }}
  
 
     - name: Publish to GitHub Packages
