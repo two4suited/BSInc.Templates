@@ -1,4 +1,4 @@
-name: .NET Build, Test, and Pack
+name: .NET Build, Test, Pack, and Publish
 
 on:
   push:
@@ -32,3 +32,8 @@ jobs:
 
     - name: Pack
       run: dotnet pack BSInc.Templates.sln --configuration Release --no-restore --output ./artifacts
+
+    - name: Publish to GitHub Packages
+      run: dotnet nuget push ./artifacts/*.nupkg --source "github"
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
