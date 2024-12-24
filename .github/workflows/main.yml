@@ -34,8 +34,11 @@ jobs:
       if: github.event_name == 'push'
       run: dotnet pack BSInc.Templates.sln --configuration Release --no-restore --output ./artifacts
 
+    - name: Add GitHub Packages source
+      if: github.event_name == 'push'
+      run: dotnet nuget add source --name github "https://nuget.pkg.github.com/two4suited/index.json" --username two4suited --password ${{ secrets.GITHUB_TOKEN }}
+ 
+
     - name: Publish to GitHub Packages
       if: github.event_name == 'push'
-      run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/two4suited/index.json"
-      env:
-        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push ./artifacts/*.nupkg --source "github"      
