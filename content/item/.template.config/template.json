@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Brian Sheridan",
+  "classifications": [ "Common", "Code" ],
+  "identity": "BSInc.StringExtensions",
+  "name": "BSInc String Extensions",
+  "shortName": "stringext",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "ClassName":{
+      "type": "parameter",
+      "description": "The name of the code file and class.",
+      "datatype": "text",
+      "replaces": "StringExtensions",
+      "fileRename": "StringExtensions",
+      "defaultValue": "StringExtensions"
+    }
+  }
+}
