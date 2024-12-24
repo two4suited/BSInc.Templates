@@ -36,6 +36,6 @@ jobs:
 
     - name: Publish to GitHub Packages
       if: github.event_name == 'push'
-      run: dotnet nuget push ./artifacts/*.nupkg -l ${GITHUB_TOKEN} --source "https://nuget.pkg.github.com/two4suited/index.json"
+      run: dotnet nuget push ./artifacts/*.nupkg -k ${GITHUB_TOKEN} --source "https://nuget.pkg.github.com/two4suited/index.json"
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
