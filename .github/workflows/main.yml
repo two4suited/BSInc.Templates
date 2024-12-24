@@ -33,9 +33,10 @@ jobs:
     - name: Generate version number
       id: version
       run: |
-        DATE=$(date +'%Y.%m%d')
-        REVISION=$(($(git rev-list --count HEAD --since="00:00") + 1))
-        echo "VERSION=$DATE.$REVISION" >> $GITHUB_ENV
+        MAJOR=1
+        MINOR=0       
+        VERSION="$MAJOR.$MINOR.$GITHUB_RUN_NUMBER"
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
 
     - name: Pack
       if: github.event_name == 'push'
