@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Brian Sheridan",
+    "classifications": [ "Web", "Aspire","Messaging" ],
+    "identity": "BSInc.Messaging.ServiceBus",
+    "name": "BSInc Messaging ServiceBus",
+    "shortName": "bsinc-messaging-servicebus",
+    "tags" : {
+        "language": "JavaScript",
+        "type": "project"
+    },
+    "sourceName": "BSInc",
+    "preferNameDirectory": true,
+    "symbols": {       
+       "appHostHttpPortGenerated": {
+        "type": "generated",
+        "generator": "port",
+        "parameters": {
+          "low": 15000,
+          "high": 15300
+        },
+        "replaces": "15000"
+      },
+      "appHostHttpsPortGenerated": {
+        "type": "generated",
+        "generator": "port",
+        "parameters": {
+          "low": 1600,
+          "high": 16300
+        },
+        "replaces": "16000"
+      }, 
+      "otelEndpointPortGenerated": {
+        "type": "generated",
+        "generator": "port",
+        "parameters": {
+          "low": 17000,
+          "high": 17300
+        },
+        "replaces": "17000"
+      }, 
+      "serviceEndpointPortGenerated": {
+        "type": "generated",
+        "generator": "port",
+        "parameters": {
+          "low": 18000,
+          "high": 18300
+        },
+        "replaces": "16000"
+      },
+      "APIHttptPortGenerated": {
+        "type": "generated",
+        "generator": "port",
+        "parameters": {
+          "low": 21000,
+          "high": 21300
+        },
+        "replaces": "21000"
+      },
+      "APIHttpsPortGenerated": {
+        "type": "generated",
+        "generator": "port",
+        "parameters": {
+          "low": 22000,
+          "high": 22300
+        },
+        "replaces": "22000"
+      }
+    },
+    "sources": [{
+      "rename": {
+        "gitignore": ".gitignore"
+      },
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/node_modules/**",
+        "**/.next/**"
+      ]
+    }]
+  }
