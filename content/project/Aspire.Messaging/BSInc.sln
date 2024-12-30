@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.AppHost", "BSInc.AppHost\BSInc.AppHost.csproj", "{9E932857-CA7E-4824-93FD-5B25A72526C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.Worker", "BSInc.Worker\BSInc.Worker.csproj", "{D0AB99DF-06BD-4022-B28D-EF2241AC19C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.Publish", "BSInc.Publish\BSInc.Publish.csproj", "{D0AB99DF-06BD-4022-B28D-EF2241AC19C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.Aspire.Hosting", "BSInc.Aspire.Hosting\BSInc.Aspire.Hosting.csproj", "{90A79590-6DDE-4BAF-BD1A-47BB40F887D8}"
 EndProject

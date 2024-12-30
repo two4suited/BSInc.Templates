@@ -26,7 +26,7 @@ public static class ServiceBusResourceBuilderExtensions
             .WaitFor(sql)
             .WithVolume($"{configFilePath}:/ServiceBus_Emulator/ConfigFiles/Config.json")
             .WithLifetime(ContainerLifetime.Persistent)
-            .WithEndpoint(targetPort:5672, port:serviceBusPort,name: ServiceBusResource.ServiceBusEndpointName)
+            .WithEndpoint(targetPort:5672, port:serviceBusPort,name: ServiceBusResource.ServiceBusEndpointName,scheme:"sb")
             .WithEnvironment("MSSQL_SA_PASSWORD", sql.Resource.PasswordParameter.Value)
             .WithEnvironment("SQL_SERVER", "sql")
             .WithEnvironment("ACCEPT_EULA", "Y");

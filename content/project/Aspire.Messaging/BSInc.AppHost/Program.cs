@@ -4,7 +4,7 @@ var serviebusConfigfilePath = Path.Combine(Directory.GetCurrentDirectory(), "con
 
 var sb = builder.AddServiceBus("servicebus",serviebusConfigfilePath);
 
-var worker = builder.AddProject<Projects.BSInc_Worker>("worker")
+var worker = builder.AddProject<Projects.BSInc_Publish>("publisher")
     .WithReference(sb)
     .WaitFor(sb);
 

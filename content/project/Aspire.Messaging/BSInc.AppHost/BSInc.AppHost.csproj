@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BSInc.Aspire.Hosting\BSInc.Aspire.Hosting.csproj" IsAspireProjectResource="false" />
-    <ProjectReference Include="..\BSInc.Worker\BSInc.Worker.csproj" />
+    <ProjectReference Include="..\BSInc.Publish\BSInc.Publish.csproj" />
   </ItemGroup>
 
 </Project>
