@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.Aspire.Hosting", "BSI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.ServiceDefaults", "BSInc.ServiceDefaults\BSInc.ServiceDefaults.csproj", "{81D82604-CFB6-4F32-B94D-75695444B829}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSInc.Consumer", "BSInc.Consumer\BSInc.Consumer.csproj", "{37B7CC44-D1EA-4ADF-BCEC-D47B3A0BA8EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{81D82604-CFB6-4F32-B94D-75695444B829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81D82604-CFB6-4F32-B94D-75695444B829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81D82604-CFB6-4F32-B94D-75695444B829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B7CC44-D1EA-4ADF-BCEC-D47B3A0BA8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B7CC44-D1EA-4ADF-BCEC-D47B3A0BA8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B7CC44-D1EA-4ADF-BCEC-D47B3A0BA8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B7CC44-D1EA-4ADF-BCEC-D47B3A0BA8EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
